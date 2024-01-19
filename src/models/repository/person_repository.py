@@ -1,5 +1,6 @@
 from src.models.entities.person import Person
 
+
 class __PersonRepository:
     def __init__(self) -> None:
         self.__people = []
@@ -9,7 +10,9 @@ class __PersonRepository:
 
     def find_person_by_name(self, name: str) -> Person:
         for person in self.__people:
-            if person.name == name: return person
+            if person.name == name:
+                return person
         return None
+
 
 person_repository = __PersonRepository()
